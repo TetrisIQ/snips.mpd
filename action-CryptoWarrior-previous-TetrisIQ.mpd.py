@@ -29,7 +29,7 @@ def subscribe_intent_callback(hermes, intentMessage):
 
 
 def action_wrapper(hermes, intentMessage, conf):
-    hermes.publish_end_session("Voheriger song")
+    hermes.publish_end_session(intentMessage.session_id, "Voheriger song")
 
 
 if __name__ == "__main__":

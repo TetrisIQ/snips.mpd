@@ -29,8 +29,7 @@ def subscribe_intent_callback(hermes, intentMessage):
 
 
 def action_wrapper(hermes, intentMessage, conf):
-    hermes.publish_end_session("Lauter")
-
+    hermes.publish_end_session(intentMessage.session_id, "Lauter")
 
 if __name__ == "__main__":
     with Hermes("localhost:1883") as h:

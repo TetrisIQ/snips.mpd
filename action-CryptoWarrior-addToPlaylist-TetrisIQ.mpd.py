@@ -40,7 +40,7 @@ def action_wrapper(hermes, intentMessage, conf):
     """ 
     
     if intentMessage.intent.intent_name == "CryptoWarrior:addToPlaylist":
-        hermes.publish_end_session("Füge der playlist hinzu")
+        hermes.publish_end_session(intentMessage.session_id, "Füge der playlist hinzu")
     
 
 
